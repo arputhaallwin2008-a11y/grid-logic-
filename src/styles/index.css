@@ -4,22 +4,22 @@
 
 :root {
   color-scheme: dark;
-  --theme-bg-workspace: #060814;
-  --theme-bg-toolbar: #090d1f;
-  --theme-bg-panel: #0c1126;
-  --theme-bg-panel-subtle: #111836;
-  --theme-bg-panel-hover: #18224b;
-  --theme-border-panel: #1e2a52;
-  --theme-border-subtle: #2a3a6e;
-  --theme-signal-high: #00f5d4;
-  --theme-signal-high-glow: rgba(0, 245, 212, 0.6);
-  --theme-signal-low: #3f4c6e;
-  --theme-signal-active: #f72585;
-  --theme-clock: #ffd166;
-  --theme-accent: #00f5d4;
-  --theme-text-primary: #f8fafc;
-  --theme-text-secondary: #94a3b8;
-  --theme-text-muted: #64748b;
+  --theme-bg-workspace: #0c0a09;
+  --theme-bg-toolbar: #14100e;
+  --theme-bg-panel: #1a1412;
+  --theme-bg-panel-subtle: #261e1a;
+  --theme-bg-panel-hover: #362a24;
+  --theme-border-panel: #362822;
+  --theme-border-subtle: #4a3830;
+  --theme-signal-high: #f59e0b;
+  --theme-signal-high-glow: rgba(245, 158, 11, 0.65);
+  --theme-signal-low: #57453f;
+  --theme-signal-active: #f97316;
+  --theme-clock: #ef4444;
+  --theme-accent: #f59e0b;
+  --theme-text-primary: #fffbeb;
+  --theme-text-secondary: #d97706;
+  --theme-text-muted: #78716c;
 }
 
 body {

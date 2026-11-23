@@ -176,7 +176,7 @@ export const THEMES: ThemePalette[] = [
     textMuted: '#4b7c5e',
   },
   {
-    id: 'solar-amber',
+    id: 'solar-flare',
     name: 'Solar Flare',
     description: 'Blazing warm amber HIGH signals with warm carbon-slate chassis',
     badgeColor: '#f59e0b',
@@ -233,4 +233,4 @@ export const THEMES: ThemePalette[] = [
   },
 ];
 
-export const DEFAULT_THEME_ID = 'synthwave-purple';
+export const DEFAULT_THEME_ID = 'solar-flare';

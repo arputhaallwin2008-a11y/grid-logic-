@@ -12,7 +12,13 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [themeId, setThemeId] = useState<string>(() => {
-    return localStorage.getItem('gridlogic-theme') || DEFAULT_THEME_ID;
+    const saved = localStorage.getItem('gridlogic-theme');
+    if (saved === 'solar-flare' || saved === 'solar-amber') return 'solar-flare';
+    // If user explicitly asks for Solar Flare, use it as default
+    if (saved && THEMES.some(t => t.id === saved && saved !== 'neon-cyber' && saved !== 'synthwave-purple')) {
+      return saved;
+    }
+    return DEFAULT_THEME_ID;
   });
 
   const theme = THEMES.find(t => t.id === themeId) || THEMES[0];
