@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --theme-bg-workspace: #060814;
+  --theme-bg-toolbar: #090d1f;
+  --theme-bg-panel: #0c1126;
+  --theme-bg-panel-subtle: #111836;
+  --theme-bg-panel-hover: #18224b;
+  --theme-border-panel: #1e2a52;
+  --theme-border-subtle: #2a3a6e;
+  --theme-signal-high: #00f5d4;
+  --theme-signal-high-glow: rgba(0, 245, 212, 0.6);
+  --theme-signal-low: #3f4c6e;
+  --theme-signal-active: #f72585;
+  --theme-clock: #ffd166;
+  --theme-accent: #00f5d4;
+  --theme-text-primary: #f8fafc;
+  --theme-text-secondary: #94a3b8;
+  --theme-text-muted: #64748b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--theme-bg-workspace);
+  color: var(--theme-text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Engineering CAD Grid background */
+.cad-grid-pattern {
+  background-color: var(--theme-bg-workspace);
+  background-image: radial-gradient(var(--theme-signal-high-glow) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Wire pulse animations */
+@keyframes wireFlow {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.wire-animated-flow {
+  stroke-dasharray: 6 4;
+  animation: wireFlow 1.2s linear infinite;
+}
+
+/* Glassmorphism panels */
+.engineering-panel {
+  background: rgba(19, 25, 38, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}

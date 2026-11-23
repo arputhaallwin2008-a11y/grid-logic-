@@ -1,0 +1,236 @@
+export interface ThemePalette {
+  id: string;
+  name: string;
+  description: string;
+  badgeColor: string; // for the selector indicator
+  isLight?: boolean;
+  // Core backgrounds
+  bgWorkspace: string;
+  bgToolbar: string;
+  bgPanel: string;
+  bgPanelSubtle: string;
+  bgPanelHover: string;
+  borderPanel: string;
+  borderSubtle: string;
+  // Canvas & Grid
+  gridDotColor: string;
+  svgGridColor: string;
+  // Logic Signals
+  signalHigh: string;
+  signalHighGlow: string;
+  signalHighFill: string;
+  signalLow: string;
+  signalActive: string; // Selection
+  // Specialized
+  clockColor: string;
+  accentColor: string;
+  gateBody: string;
+  gateBorder: string;
+  gateBorderSelected: string;
+  // Text
+  textPrimary: string;
+  textSecondary: string;
+  textMuted: string;
+}
+
+export const THEMES: ThemePalette[] = [
+  {
+    id: 'light-cad',
+    name: 'Clean Light CAD',
+    description: 'Crisp bright technical drafting paper with high-contrast schematic lines',
+    badgeColor: '#0284c7',
+    isLight: true,
+    bgWorkspace: '#f8fafc',
+    bgToolbar: '#ffffff',
+    bgPanel: '#ffffff',
+    bgPanelSubtle: '#f1f5f9',
+    bgPanelHover: '#e2e8f0',
+    borderPanel: '#cbd5e1',
+    borderSubtle: '#94a3b8',
+    gridDotColor: 'rgba(15, 23, 42, 0.15)',
+    svgGridColor: '#e2e8f0',
+    signalHigh: '#0284c7',
+    signalHighGlow: 'rgba(2, 132, 199, 0.4)',
+    signalHighFill: '#bae6fd',
+    signalLow: '#94a3b8',
+    signalActive: '#ec4899',
+    clockColor: '#ea580c',
+    accentColor: '#0284c7',
+    gateBody: '#ffffff',
+    gateBorder: '#0f172a',
+    gateBorderSelected: '#0284c7',
+    textPrimary: '#0f172a',
+    textSecondary: '#475569',
+    textMuted: '#64748b',
+  },
+  {
+    id: 'synthwave-purple',
+    name: 'Synthwave Purple',
+    description: 'Retro 80s neon purple & magenta glow with deep ultraviolet chassis',
+    badgeColor: '#d946ef',
+    bgWorkspace: '#0c071e',
+    bgToolbar: '#120b2e',
+    bgPanel: '#170e3b',
+    bgPanelSubtle: '#221554',
+    bgPanelHover: '#2e1c70',
+    borderPanel: '#3b248a',
+    borderSubtle: '#4c32aa',
+    gridDotColor: 'rgba(217, 70, 239, 0.15)',
+    svgGridColor: '#241755',
+    signalHigh: '#e879f9',
+    signalHighGlow: 'rgba(232, 121, 249, 0.65)',
+    signalHighFill: '#701a75',
+    signalLow: '#4c3b71',
+    signalActive: '#38bdf8',
+    clockColor: '#facc15',
+    accentColor: '#d946ef',
+    gateBody: '#190f40',
+    gateBorder: '#633cb8',
+    gateBorderSelected: '#e879f9',
+    textPrimary: '#fdf4ff',
+    textSecondary: '#e9d5ff',
+    textMuted: '#a855f7',
+  },
+  {
+    id: 'neon-cyber',
+    name: 'Neon Cyber',
+    description: 'Electric cyan HIGH signals with deep cosmic violet-indigo panels',
+    badgeColor: '#00f5d4',
+    bgWorkspace: '#060814',
+    bgToolbar: '#090d1f',
+    bgPanel: '#0c1126',
+    bgPanelSubtle: '#111836',
+    bgPanelHover: '#18224b',
+    borderPanel: '#1e2a52',
+    borderSubtle: '#2a3a6e',
+    gridDotColor: 'rgba(0, 245, 212, 0.12)',
+    svgGridColor: '#17203d',
+    signalHigh: '#00f5d4',
+    signalHighGlow: 'rgba(0, 245, 212, 0.6)',
+    signalHighFill: '#004d42',
+    signalLow: '#3f4c6e',
+    signalActive: '#f72585',
+    clockColor: '#ffd166',
+    accentColor: '#00f5d4',
+    gateBody: '#101730',
+    gateBorder: '#3b4f84',
+    gateBorderSelected: '#00f5d4',
+    textPrimary: '#f8fafc',
+    textSecondary: '#94a3b8',
+    textMuted: '#64748b',
+  },
+  {
+    id: 'deep-space',
+    name: 'Deep Space Navy',
+    description: 'Luminous sky blue signals with dark aerospace midnight tones',
+    badgeColor: '#38bdf8',
+    bgWorkspace: '#070b14',
+    bgToolbar: '#0c1322',
+    bgPanel: '#0f172a',
+    bgPanelSubtle: '#17223b',
+    bgPanelHover: '#1e2c4d',
+    borderPanel: '#1e293b',
+    borderSubtle: '#334155',
+    gridDotColor: 'rgba(56, 189, 248, 0.15)',
+    svgGridColor: '#1e293b',
+    signalHigh: '#38bdf8',
+    signalHighGlow: 'rgba(56, 189, 248, 0.6)',
+    signalHighFill: '#0c4a6e',
+    signalLow: '#475569',
+    signalActive: '#818cf8',
+    clockColor: '#f59e0b',
+    accentColor: '#38bdf8',
+    gateBody: '#131d31',
+    gateBorder: '#334155',
+    gateBorderSelected: '#38bdf8',
+    textPrimary: '#f1f5f9',
+    textSecondary: '#94a3b8',
+    textMuted: '#64748b',
+  },
+  {
+    id: 'matrix-emerald',
+    name: 'Matrix Terminal',
+    description: 'Phosphor green signals with pure obsidian hacker aesthetics',
+    badgeColor: '#10b981',
+    bgWorkspace: '#040705',
+    bgToolbar: '#080f0a',
+    bgPanel: '#0c1710',
+    bgPanelSubtle: '#122218',
+    bgPanelHover: '#183021',
+    borderPanel: '#1a3824',
+    borderSubtle: '#224d31',
+    gridDotColor: 'rgba(16, 185, 129, 0.15)',
+    svgGridColor: '#14291c',
+    signalHigh: '#10b981',
+    signalHighGlow: 'rgba(16, 185, 129, 0.6)',
+    signalHighFill: '#064e3b',
+    signalLow: '#37473d',
+    signalActive: '#34d399',
+    clockColor: '#fbbf24',
+    accentColor: '#10b981',
+    gateBody: '#0e1d14',
+    gateBorder: '#275237',
+    gateBorderSelected: '#10b981',
+    textPrimary: '#ecfdf5',
+    textSecondary: '#a7f3d0',
+    textMuted: '#4b7c5e',
+  },
+  {
+    id: 'solar-amber',
+    name: 'Solar Flare',
+    description: 'Blazing warm amber HIGH signals with warm carbon-slate chassis',
+    badgeColor: '#f59e0b',
+    bgWorkspace: '#0c0a09',
+    bgToolbar: '#14100e',
+    bgPanel: '#1a1412',
+    bgPanelSubtle: '#261e1a',
+    bgPanelHover: '#362a24',
+    borderPanel: '#362822',
+    borderSubtle: '#4a3830',
+    gridDotColor: 'rgba(245, 158, 11, 0.15)',
+    svgGridColor: '#2b1f1a',
+    signalHigh: '#f59e0b',
+    signalHighGlow: 'rgba(245, 158, 11, 0.65)',
+    signalHighFill: '#78350f',
+    signalLow: '#57453f',
+    signalActive: '#f97316',
+    clockColor: '#ef4444',
+    accentColor: '#f59e0b',
+    gateBody: '#201815',
+    gateBorder: '#4d372e',
+    gateBorderSelected: '#f59e0b',
+    textPrimary: '#fffbeb',
+    textSecondary: '#d97706',
+    textMuted: '#78716c',
+  },
+  {
+    id: 'blueprint-cad',
+    name: 'Blueprint CAD',
+    description: 'Classic engineering blueprint blue with stark white/cyan schematic paths',
+    badgeColor: '#67e8f9',
+    bgWorkspace: '#07182e',
+    bgToolbar: '#0a2240',
+    bgPanel: '#0c2a4e',
+    bgPanelSubtle: '#113969',
+    bgPanelHover: '#164885',
+    borderPanel: '#1a4e8c',
+    borderSubtle: '#2563eb',
+    gridDotColor: 'rgba(103, 232, 249, 0.2)',
+    svgGridColor: '#153f70',
+    signalHigh: '#67e8f9',
+    signalHighGlow: 'rgba(103, 232, 249, 0.6)',
+    signalHighFill: '#0e7490',
+    signalLow: '#2c4a6f',
+    signalActive: '#fbbf24',
+    clockColor: '#f43f5e',
+    accentColor: '#67e8f9',
+    gateBody: '#0e315b',
+    gateBorder: '#2963a4',
+    gateBorderSelected: '#67e8f9',
+    textPrimary: '#f0f9ff',
+    textSecondary: '#93c5fd',
+    textMuted: '#60a5fa',
+  },
+];
+
+export const DEFAULT_THEME_ID = 'synthwave-purple';
